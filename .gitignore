@@ -1,0 +1,8 @@
+.vscode/*.json
+.vscode/launch.json
+.vscode/.alcache/*.*
+*.app
+*.bak
+*.orig
+My/*.al
+.vscode/launch.json
