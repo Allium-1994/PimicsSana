@@ -1,8 +1,9 @@
 .vscode/*.json
-.vscode/launch.json
 .vscode/.alcache/*.*
-*.app
+.alpackages/*.*
+.snapshots/*.*
 *.bak
 *.orig
+*.app
+*.xml
 My/*.al
-.vscode/launch.json
