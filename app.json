@@ -2,7 +2,7 @@
   "id": "c9e1da0b-e414-40d2-9477-c78c276d0414",
   "name": "Pimics - Sana",
   "publisher": "Allium",
-  "version": "1.1.0.3",
+  "version": "1.1.2.13",
   "brief": "Pimics and Sana Commerce Integration",
   "description": "It makes Pimics and Sana Commerce communication and processes more smoothly",
   "privacyStatement": "",
@@ -16,7 +16,7 @@
   ],
   "screenshots": [],
   "platform": "1.0.0.0",
-  "application": "17.0.0.0",
+  "application": "19.0.0.0",
   "idRanges": [
     {
       "from": 82530,
