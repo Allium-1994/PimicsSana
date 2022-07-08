@@ -21,7 +21,7 @@ codeunit 82530 "PIMX SC Subscriber"
         Duration: Duration;
     begin
         Start := CurrentDateTime();
-        log.LogData(ObjectType::Codeunit, Codeunit::"PIMX SC Subscriber", 'OnBeforeGetProducts: Params for ' + Params.WebsiteId, StrSubstNo('Item Filters:\%1\Params:\PageIndex:%3\PageSize:%4\VisibleOnly:%5\%2', Item.GetFilters(), ParamsToText(Params), Params.PageIndex, Params.PageSize, Params.VisibleOnly));
+        log.SaveMessage('PIMSC001', "PIMX Activity Log Type"::"Debug Message", Codeunit::"PIMX SC Subscriber", ObjectType::Codeunit, 'OnBeforeGetProducts: Params for ' + Params.WebsiteId, StrSubstNo('Item Filters:\%1\Params:\PageIndex:%3\PageSize:%4\VisibleOnly:%5\%2', Item.GetFilters(), ParamsToText(Params), Params.PageIndex, Params.PageSize, Params.VisibleOnly));
 
         if not publHeader.GetByExternalCode(Params.WebsiteId) then
             exit;
@@ -88,7 +88,7 @@ codeunit 82530 "PIMX SC Subscriber"
         Dimensions.Add('pageSize', format(Params.PageSize));
         Dimensions.Add('duration', format(Duration, 9));
         Session.LogMessage('PIMXSC101', 'OnBeforeGetProducts is done', Verbosity::Normal, DataClassification::OrganizationIdentifiableInformation, TelemetryScope::All, Dimensions);
-        log.LogData(ObjectType::Codeunit, Codeunit::"PIMX SC Subscriber", StrSubstNo(PimLog_lbl, Params.WebsiteId, _Count), StrSubstNo('Count: %1\Duration: %2\Position: %3\Filter Date: %4\Filter Item No: %5\Selected ItemIds: %6', _Count, Duration, Position, DateFilter, ItemNoFilter, ListToText(selected)));
+        log.SaveMessage('PIMXSC101', "PIMX Activity Log Type"::"Debug Message", Codeunit::"PIMX SC Subscriber", ObjectType::Codeunit, StrSubstNo(PimLog_lbl, Params.WebsiteId, _Count), StrSubstNo('Count: %1\Duration: %2\Position: %3\Filter Date: %4\Filter Item No: %5\Selected ItemIds: %6', _Count, Duration, Position, DateFilter, ItemNoFilter, ListToText(selected)));
     end;
 
     local procedure MarkAll(var Item: Record Item) _Count: Integer
