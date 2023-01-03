@@ -2,7 +2,7 @@
   "id": "c9e1da0b-e414-40d2-9477-c78c276d0414",
   "name": "Pimics - Sana",
   "publisher": "Allium",
-  "version": "1.2.0.1",
+  "version": "1.7.21.1",
   "brief": "Pimics and Sana Commerce Integration",
   "description": "It makes Pimics and Sana Commerce communication and processes more smoothly",
   "privacyStatement": "",
@@ -11,20 +11,34 @@
   "url": "",
   "logo": "",
   "dependencies": [
-    { "id": "394dc561-0292-494f-93f0-4583392bd7e0", "name": "Pimics", "publisher": "Allium", "version": "6.0.0.0" },
-    { "id": "530176f7-9f0d-467b-8b30-a321d5d4b59d", "publisher": "Sana Commerce", "name": "Sana Commerce (RoW)", "version": "10.0.0.0"}
+    {
+      "id": "394dc561-0292-494f-93f0-4583392bd7e0",
+      "name": "Pimics PIM",
+      "publisher": "Allium",
+      "version": "7.0.0.0"
+    },
+    {
+      "id": "530176f7-9f0d-467b-8b30-a321d5d4b59d",
+      "publisher": "Sana Commerce",
+      "name": "Sana Commerce (RoW)",
+      "version": "10.0.0.0"
+    }
   ],
   "screenshots": [],
+  "runtime": "10.0",
   "platform": "1.0.0.0",
-  "application": "20.0.0.0",
+  "application": "21.0.0.0",
+  "contextSensitiveHelpUrl": "https://docs.pimics.com/en-us/",
   "idRanges": [
     {
       "from": 82530,
       "to": 82550
     }
   ],
-  "contextSensitiveHelpUrl": "https://docs.pimics.com/en-us/",
-  "showMyCode": true,
-  "runtime": "6.0",
-  "applicationInsightsKey": "dd848e18-1fcb-4156-8a33-9f128f447501"
+  "applicationInsightsConnectionString": "InstrumentationKey=dd848e18-1fcb-4156-8a33-9f128f447501;IngestionEndpoint=https://westeurope-1.in.applicationinsights.azure.com/;LiveEndpoint=https://westeurope.livediagnostics.monitor.azure.com/",
+  "resourceExposurePolicy": {
+      "allowDebugging": true,
+      "allowDownloadingSource": false,
+      "includeSourceInSymbolFile": false
+  }
 }
